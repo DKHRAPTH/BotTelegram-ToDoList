@@ -4,6 +4,7 @@ import time
 import json
 import datetime
 from zoneinfo import ZoneInfo
+from dotenv import load_dotenv
 TOKEN = os.environ['TOKEN']
 URL = f'https://api.telegram.org/bot{TOKEN}/'
 LAST_UPDATE_ID = 0
