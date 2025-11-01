@@ -185,10 +185,12 @@ version = get_bot_version()
 print(f"🤖 9CharnBot started with version: {version}")
 
 while True:
+    
     get_updates()
     check_and_notify()
     lst = load_schedule()
     new_lst = [e for e in lst if not e.get('notified', False)]
     if len(new_lst) != len(lst):
         save_schedule(new_lst)
+        
     time.sleep(1)
